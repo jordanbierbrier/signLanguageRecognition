@@ -79,17 +79,17 @@ def main():
                 pred_letter = predict_letter(hand_img, clf)
 
                 # Display prediction
-                cv2.putText(rect_frame, "Guessed Letter:", (500, 100),
+                cv2.putText(rect_frame, "Prediction:", (10, 70),
                             cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
-                cv2.putText(rect_frame, pred_letter, (800, 200),
-                            cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), 3)
+                cv2.putText(rect_frame, pred_letter, (360, 70),
+                            cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
 
                 if pred_letter == prev_letter:
                     confidence += 1
                 else:
                     confidence = 0
 
-                if confidence > 30 and display_word:
+                if confidence > 9 and display_word:
                     word += pred_letter
                     confidence = 0
 
@@ -106,8 +106,8 @@ def main():
         new_frame_time = time.time()
         fps = int(1 / (new_frame_time - prev_frame_time + 1e-5))
         prev_frame_time = new_frame_time
-        cv2.putText(rect_frame, f"FPS: {fps}", (10, 70),
-                    cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
+        # cv2.putText(rect_frame, f"FPS: {fps}", (10, 70),
+        #             cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
 
         cv2.imshow("Sign Language Recognition", rect_frame)
 

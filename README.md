@@ -1,8 +1,12 @@
 # Real-Time Sign Language Recognition
 
-<!-- ![Demo](./demo.gif)  -->
-
 ![Demo Banner](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+## Demo
+
+![Demo](./demo.gif) 
+
+---
 
 **Computer Vision** + **Machine Learning** models for recognizing American Sign Language (ASL) letters in real-time using a webcam.  
 Implemented three approaches:
