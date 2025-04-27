@@ -2,7 +2,14 @@
 
 ![Demo Banner](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-## Demo
+---
+
+## 📄 Full Report
+Find detailed report [here](report.pdf).
+
+---
+
+## 🎬 Demo
 
 ![Demo](./demo.gif) 
 
@@ -68,9 +75,6 @@ Implemented three approaches:
 - **HOG + SVM** provided a good tradeoff between speed and accuracy for real-time use.
 - **SIFT features** achieved high validation accuracy but were unstable in live prediction (sensitive to small hand changes).
 - **ResNet-50** transfer learning underperformed due to a small dataset and domain difference from ImageNet.
-
-## 📄 Full Report
-Find detailed report [here](report.pdf).
 
 ---
 Feel free to reach out if you have any questions or suggestions!
